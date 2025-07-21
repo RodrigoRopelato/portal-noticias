@@ -1,20 +1,20 @@
 section header {
-    padding-block: 12px 24px;
-    border-top: 1px solid var(--stroke-color);
-    font: var(--text-span);
+  padding-block: .75rem 1.5rem;
+  border-top: 1px solid var(--stroke-color);
+  font: var(--text-span);
 
-    a {
+  & a {
     justify-self: end;
     align-items: center;
-    gap: 8px;
+    gap: .5rem;
 
-    span{
+    & span {
       background-image: url(../assets/icons/ArrowRight.svg);
-      width: 16px;
-      height: 16px;
+      width: 1rem;
+      height: 1rem;
     }
 
-    &:hover span{
+    &:hover span {
       background-image: url(../assets/icons/ArrowRightHover.svg);
     }
   }
@@ -22,14 +22,16 @@ section header {
 
 #featured {
   grid-area: featured;
-  img {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-  }
+  width: 100%;
 
-  .card {
-    border-radius: 4px;
+  & .card img {
+      height: 22.5rem;
+      object-fit: cover;
+      border-radius: .25rem;
+    }
+
+  & .card {
+    border-radius: .25rem;
     overflow: hidden;
     position: relative;
 
@@ -43,18 +45,18 @@ section header {
           #020617 100%);
     }
 
-    figcaption {
+    & figcaption {
       position: absolute;
       bottom: 0;
 
-      padding: 24px;
+      padding: 1.5rem;
 
       &:has(.text-lg) {
-        padding: 12px;
+        padding: .75rem;
       }
 
-      h2 {
-        margin-top: 8px;
+      & h2 {
+        margin-top: .5rem;
       }
     }
 
@@ -64,26 +66,26 @@ section header {
 #weekly {
   grid-area: weekly;
 
-  &>div{
+  &>div {
     grid-template-columns: repeat(4, 292px);
   }
-  
-  img{
-    height: 160px;
+
+  & img {
+    height: 10rem;
     object-fit: cover;
   }
 
-  figure {
+  & figure {
     position: relative;
 
-    .content-tag {
+    & .content-tag {
       position: absolute;
-      top: 8px;
-      left: 8px;
+      top: .5rem;
+      left: .5rem;
     }
 
-    pc{
-      margin-top: 8px;
+    & pc {
+      margin-top: .5rem;
       font-weight: 800;
     }
   }
@@ -92,14 +94,15 @@ section header {
 
 #ai {
   grid-area: ai;
-  img{
-    width: 176px;
+
+  & img {
+    width: 11rem;
     aspect-ratio: 1/1;
     object-fit: cover;
   }
 
-  h3 {
-    margin-block: 8px 4px;
+  & h3 {
+    margin-block: .5rem .25rem;
   }
 }
 
@@ -108,10 +111,114 @@ aside {
 }
 
 #more {
-  margin-top: 32px;
-  img{
-    width: 72px;
+  margin-top: 2rem;
+
+  & img {
+    width: 4rem;
     aspect-ratio: 1/1;
     object-fit: cover;
   }
+}
+
+@media (width >= 80em) {
+
+  #featured {
+    grid-area: featured;
+
+    & .card img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: .25rem;
+    }
+
+    & .card {
+      border-radius: .25rem;
+      overflow: hidden;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 50%;
+        background: linear-gradient(180deg,
+            transparent 0%,
+            #020617 100%);
+      }
+
+      & figcaption {
+        position: absolute;
+        bottom: 0;
+
+        padding: 1.5rem;
+
+        &:has(.text-lg) {
+          padding: .75rem;
+        }
+
+        & h2 {
+          margin-top: .5rem;
+        }
+      }
+
+    }
+  }
+
+  #weekly {
+    grid-area: weekly;
+
+    &>div {
+      grid-template-columns: repeat(4, 292px);
+    }
+
+    & img {
+      height: 10rem;
+      object-fit: cover;
+    }
+
+    & figure {
+      position: relative;
+
+      & .content-tag {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+      }
+
+      & pc {
+        margin-top: .5rem;
+        font-weight: 800;
+      }
+    }
+
+  }
+
+  #ai {
+    grid-area: ai;
+
+    & img {
+      width: 11rem;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+
+    & h3 {
+      margin-block: .5rem .25rem;
+    }
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  #more {
+    margin-top: 2rem;
+
+    & img {
+      width: 4rem;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  }
+
 }
