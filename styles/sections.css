@@ -2,11 +2,13 @@ section header {
   padding-block: .75rem 1.5rem;
   border-top: 1px solid var(--stroke-color);
   font: var(--text-span);
+  grid-auto-flow: column;
 
   & a {
     justify-self: end;
     align-items: center;
     gap: .5rem;
+    grid-auto-flow: column;
 
     & span {
       background-image: url(../assets/icons/ArrowRight.svg);
@@ -21,16 +23,22 @@ section header {
 }
 
 #featured {
-  grid-area: featured;
-  width: 100%;
+  
+  & img[src*="Image 01"] {
+    height: 26rem;
+  }
 
-  & .card img {
-      height: 22.5rem;
-      object-fit: cover;
-      border-radius: .25rem;
-    }
+  & img {
+    height: 100%;
+    max-height: 26rem;
+    object-fit: cover;
+    border-radius: .25rem;
+  }
+
+
 
   & .card {
+    width: 100%;
     border-radius: .25rem;
     overflow: hidden;
     position: relative;
@@ -49,14 +57,14 @@ section header {
       position: absolute;
       bottom: 0;
 
-      padding: 1.5rem;
+      padding: 1rem;
 
       &:has(.text-lg) {
         padding: .75rem;
       }
 
       & h2 {
-        margin-top: .5rem;
+        margin-top: .5rem; 
       }
     }
 
@@ -64,14 +72,10 @@ section header {
 }
 
 #weekly {
-  grid-area: weekly;
-
-  &>div {
-    grid-template-columns: repeat(4, 292px);
-  }
 
   & img {
     height: 10rem;
+    width: 100%;
     object-fit: cover;
   }
 
@@ -84,7 +88,7 @@ section header {
       left: .5rem;
     }
 
-    & pc {
+    & p {
       margin-top: .5rem;
       font-weight: 800;
     }
@@ -93,10 +97,8 @@ section header {
 }
 
 #ai {
-  grid-area: ai;
-
   & img {
-    width: 11rem;
+    width: 5rem;
     aspect-ratio: 1/1;
     object-fit: cover;
   }
@@ -106,12 +108,13 @@ section header {
   }
 }
 
-aside {
-  grid-area: aside;
-}
-
 #more {
   margin-top: 2rem;
+  margin-bottom: 2.5rem;
+
+  & article{
+    grid-auto-flow: column;
+  }
 
   & img {
     width: 4rem;
@@ -121,6 +124,11 @@ aside {
 }
 
 @media (width >= 80em) {
+  section header {
+  padding-block: .75rem 1.5rem;
+  border-top: 1px solid var(--stroke-color);
+  font: var(--text-span);
+}
 
   #featured {
     grid-area: featured;
@@ -185,7 +193,7 @@ aside {
         left: .5rem;
       }
 
-      & pc {
+      & p {
         margin-top: .5rem;
         font-weight: 800;
       }
@@ -215,7 +223,7 @@ aside {
     margin-top: 2rem;
 
     & img {
-      width: 4rem;
+      width: 4.5rem;
       aspect-ratio: 1/1;
       object-fit: cover;
     }

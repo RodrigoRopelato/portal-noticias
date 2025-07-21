@@ -53,19 +53,16 @@ img {
 }
 
 main {
- margin-top: 1rem;
- row-gap: 1rem;
+  margin-top: 2.5rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
 
- grid-template-columns: 1fr;
-
-  grid-template-areas: 
-  "featured"
-  "weekly"
-  "ai"
-  "aside";
+  grid-template-columns: 20.5rem;
+  grid-template-rows: auto;
 }
 
-.content-tag{
+
+.content-tag {
   display: inline-block;
   background-color: var(--brand-color-dark);
 
@@ -81,24 +78,24 @@ main {
 }
 
 
-@media (width >= 80em) {
+@media (width >=80em) {
   .container {
-  max-width: 80em;
-  padding-inline: 2rem;
-  margin-inline: auto;
-}
+    max-width: 80em;
+    padding-inline: 2rem;
+    margin-inline: auto;
+  }
 
-main {
-  margin-top: 2.5rem;
- row-gap: 5rem;
- column-gap: 2rem;
+  main {
+    margin-top: 2.5rem;
+    row-gap: 5rem;
+    column-gap: 2rem;
 
- grid-template-columns: 2fr 1.5fr;
+    grid-template-columns: 2fr 1.5fr;
 
-  grid-template-areas: 
-  "featured featured"
-  "weekly weekly"
-  "ai aside";
-}
+    grid-template-areas:
+      "featured featured"
+      "weekly weekly"
+      "ai aside";
+  }
 
 }

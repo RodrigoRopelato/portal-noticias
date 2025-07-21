@@ -1,5 +1,6 @@
 #primary {
   padding-block: 1rem;
+  grid-auto-flow: column;
 
   & div:nth-child(2) {
     margin-inline: auto;
@@ -21,12 +22,14 @@
 }
 
 #secundary {
+  grid-auto-flow: column;
+  gap: 2rem;
   padding-block: .875rem;
   border: solid 1px var(--stroke-color);
   border-inline: none;
 
   overflow-x: auto;
-  
+
   & a {
     text-wrap: nowrap;
   }
@@ -44,6 +47,6 @@
   }
 
   #secundary {
-  justify-content: space-between;
-}
+    justify-content: space-between;
+  }
 }

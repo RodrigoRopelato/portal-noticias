@@ -29,7 +29,7 @@
         <img src="./assets/icons/MagnifyingGlass.svg" alt="icone de lupa">
       </div>
     </nav>
-    <nav id="secundary" class="grid grid-flow-col gap-32">
+    <nav id="secundary" class="grid grid-flow-col">
       <a href="#">Inteligência Artificial</a>
       <a href="#">Blockchain</a>
       <a href="#">Hologramas</a>
@@ -39,7 +39,6 @@
       <a href="#">Realidade Virtual</a>
     </nav>
   </header>
-
   <main class="grid container">
     <section id="featured" class="grid grid-flow-col gap-16">
       <figure class="card">
@@ -47,8 +46,14 @@
 
         <figcaption>
           <span class="content-tag">robótica</span>
-          <h2 class="text-2xl">Robôs domésticos começam a ser adotados para tarefas diárias, prometendo mais conforto e
-            eficiência nas residências.</h2>
+          <div class="desktop-only">
+            <h2 class="text-2xl">Robôs domésticos começam a ser adotados para tarefas diárias, prometendo mais conforto
+              e
+              eficiência nas residências.</h2>
+          </div>
+          <div class="smartphone">
+            <h2 class="text-2xl">Robôs domésticos começam a ser adotados para tarefas...</h2>
+          </div>
         </figcaption>
       </figure>
 
@@ -157,7 +162,7 @@
       </header>
 
       <div class="grid gap-32">
-        <article class="grid grid-flow-col gap-16">
+        <article class="grid grid-flow-col gap-16 desktop-only">
           <div>
             <span class="content-tag">Inteligência Artificial</span>
             <h3 class="text-xl">
@@ -174,7 +179,24 @@
             <img src="./assets/images/Image 10.png" alt="">
           </div>
         </article>
-        <article class="grid grid-flow-col gap-16">
+
+        <article class="grid grid-flow-col gap-16 smartphone">
+          <div>
+            <img src="./assets/images/Image 10.png" alt="">
+          </div>
+          <div>
+            <span class="content-tag">Inteligência Artificial</span>
+            <h3 class="text-xl">
+              Empresa surpreende o mundo ao anunciar um alg...
+            </h3>
+            <p class="text-sm">
+              Em um avanço surpreendente da inteligência artificial, uma empresa anuncia o desenvolvimento de um
+              algoritmo capaz de prever eventos f...
+            </p>
+          </div>
+        </article>
+
+        <article class="grid grid-flow-col gap-16 desktop-only">
           <div>
             <span class="content-tag">Inteligência Artificial</span>
             <h3 class="text-xl">
@@ -192,7 +214,24 @@
             <img src="./assets/images/Image 11.png" alt="">
           </div>
         </article>
-        <article class="grid grid-flow-col gap-16">
+        
+        <article class="grid grid-flow-col gap-16 smartphone">
+          <div>
+            <img src="./assets/images/Image 11.png" alt="">
+          </div>
+          <div>
+            <span class="content-tag">Inteligência Artificial</span>
+            <h3 class="text-xl">
+              Dispositivo portátil promete traduzir instantaneamente...
+            </h3>
+            <p class="text-sm">
+              Em um mundo cada vez mais conectado, a comunicação sem fronteiras é essencial. Nesse contexto, um
+              dispositivo portátil sur...
+            </p>
+          </div>
+        </article>
+
+        <article class="grid grid-flow-col gap-16 desktop-only">
           <div>
             <span class="content-tag">Inteligência Artificial</span>
             <h3 class="text-xl">
@@ -209,7 +248,24 @@
             <img src="./assets/images/Image 12.png" alt="">
           </div>
         </article>
-        <article class="grid grid-flow-col gap-16">
+
+        <article class="grid grid-flow-col gap-16 smartphone">
+          <div>
+            <img src="./assets/images/Image 12.png" alt="">
+          </div>
+          <div>
+            <span class="content-tag">Inteligência Artificial</span>
+            <h3 class="text-xl">
+              Criados para auxiliar idosos, robôs de companhia ganha...
+            </h3>
+            <p class="text-sm">
+              A tecnologia não só avança, mas também busca tornar a vida mais significativa para todas as gerações. No
+              cenário atual, os robôs sociais...
+            </p>
+          </div>
+        </article>
+
+        <article class="grid grid-flow-col gap-16 desktop-only">
           <div>
             <span class="content-tag">Inteligência Artificial</span>
             <h3 class="text-xl">
@@ -226,6 +282,23 @@
           </div>
           <div>
             <img src="./assets/images/Image 13.png" alt="">
+          </div>
+        </article>
+
+        <article class="grid grid-flow-col gap-16 smartphone">
+          <div>
+            <img src="./assets/images/Image 13.png" alt="">
+          </div>
+          <div>
+            <span class="content-tag">Inteligência Artificial</span>
+            <h3 class="text-xl">
+              Aplicativo utiliza inteligência artificial para ajudar usuári...
+
+            </h3>
+            <p class="text-sm">
+              No turbilhão da vida moderna, onde distrações são abundantes, um aplicativo inovador surge como um aliado
+              indispensável para quem bus...
+            </p>
           </div>
         </article>
       </div>
@@ -246,6 +319,7 @@
         </header>
 
         <div class="grid gap-32">
+
           <article class="grid grid-flow-col gap-16">
             <div>
               <img src="./assets/images/Image 14.png" alt="">
@@ -253,12 +327,15 @@
 
             <div>
               <span class="content-tag">Software</span>
-              <h3 class="text-xl">
+              <h3 class="text-xl desktop-only">
                 Aplicativo de monitoramento ambiental ganha destaque, incentivando práticas ecológicas e ...
               </h3>
-
+              <h3 class="text-lg smartphone">
+                Aplicativo de monitoramento ambiental ganha destaque, in...
+              </h3>
             </div>
           </article>
+
           <article class="grid grid-flow-col gap-16">
             <div>
               <img src="./assets/images/Image 15.png" alt="">
@@ -266,12 +343,15 @@
 
             <div>
               <span class="content-tag">Realidade Virtual</span>
-              <h3 class="text-xl">
+              <h3 class="text-xl desktop-only">
                 Óculos de realidade virtual com feedback tátil proporcionam uma experiência sensorial ...
               </h3>
-
+              <h3 class="text-lg smartphone">
+                Óculos de realidade virtual com feedback tátil proporcio...
+              </h3>
             </div>
           </article>
+
           <article class="grid grid-flow-col gap-16">
             <div>
               <img src="./assets/images/Image 16.png" alt="">
@@ -279,12 +359,15 @@
 
             <div>
               <span class="content-tag">Criptomoedas</span>
-              <h3 class="text-xl">
+              <h3 class="text-xl desktop-only">
                 Surge uma nova moeda digital baseada em tecnologias sustentáveis, buscando minimizar...
               </h3>
-
+              <h3 class="text-lg smartphone">
+                Surge uma nova moeda digital baseada em tecnologias sust...
+              </h3>
             </div>
           </article>
+
           <article class="grid grid-flow-col gap-16">
             <div>
               <img src="./assets/images/Image 17.png" alt="">
@@ -292,12 +375,15 @@
 
             <div>
               <span class="content-tag">Drones</span>
-              <h3 class="text-xl">
+              <h3 class="text-xl desktop-only">
                 Empresas de e-commerce implementam frota de drones para entregas rápidas, transformando ...
               </h3>
-
+              <h3 class="text-lg smartphone">
+                Empresas de e-commerce implementam frota de drones...
+              </h3>
             </div>
           </article>
+
           <article class="grid grid-flow-col gap-16">
             <div>
               <img src="./assets/images/Image 18.png" alt="">
@@ -305,12 +391,15 @@
 
             <div>
               <span class="content-tag">Impressão 3d</span>
-              <h3 class="text-xl">
+              <h3 class="text-xl desktop-only">
                 Tecnologia inovadora permite a impressão 3D de órgãos humanos, revolucionando a medicina e...
               </h3>
-
+              <h3 class="text-lg smartphone">
+                Tecnologia inovadora permite a impressão 3D de órgãos hu...
+              </h3>
             </div>
           </article>
+
         </div>
       </section>
     </aside>

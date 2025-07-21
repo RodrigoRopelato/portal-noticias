@@ -2,14 +2,6 @@
   display: grid;
 }
 
-.grid-flow-col {
-  grid-auto-flow: column;
-}
-
-.grid-cols-2 {
-  grid-template-columns: 1fr 1fr;
-}
-
 .gap-16 {
   gap: 1rem;
 }
@@ -43,10 +35,26 @@
   gap: 1rem;
 }
 
+.smartphone {
+  grid-auto-flow: column;
+}
+
 @media (width >=80em) {
 
   .desktop-only {
-    display: initial;
+    display: grid;
+  }
+
+  .smartphone {
+    display: none;
+  }
+
+  .grid-flow-col {
+    grid-auto-flow: column;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
   }
 
 }
